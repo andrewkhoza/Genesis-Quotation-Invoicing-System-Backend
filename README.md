@@ -7,10 +7,13 @@
 [![API](https://img.shields.io/badge/API-RESTful%20JSON-orange.svg)]()
 [![Auth](https://img.shields.io/badge/Auth-JWT%20%2B%20Refresh%20Tokens-yellow.svg)]()
 [![License](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](LICENSE.md)
+[![Status](https://img.shields.io/badge/Status-Live%20%26%20Active-brightgreen.svg)]()
 
 An **API-first, multi-tenant SaaS backend** built on Yii2. Genesis powers quotation, invoicing, and credit note management for businesses — with JWT authentication, role-based access control, tenant isolation, and secure public document sharing.
 
-> **Frontend:** This is the backend API only. A React/Vue SPA consumes these endpoints. All authenticated requests require an `Authorization: Bearer <token>` header. Public document routes use cryptographically secure UUIDs.
+> **This repository contains the README only.** The source code is proprietary and actively running in production. Interested parties are welcome to [get in touch](#contact--demos) for a live walkthrough or code demo.
+
+> **Frontend:** This is the backend API only. A React/Vite SPA consumes these endpoints. All authenticated requests require an `Authorization: Bearer <token>` header. Public document routes use cryptographically secure UUIDs.
 
 </div>
 
@@ -31,6 +34,7 @@ An **API-first, multi-tenant SaaS backend** built on Yii2. Genesis powers quotat
 - [Security](#security)
 - [Directory Structure](#directory-structure)
 - [License](#license)
+- [Contact & Demos](#contact--demos)
 
 ---
 
@@ -112,7 +116,7 @@ An **API-first, multi-tenant SaaS backend** built on Yii2. Genesis powers quotat
 ```
 ┌─────────────────────────────────────────────────────────┐
 │               Authenticated Clients (SPA)                │
-│         Admin │ Staff │ Owner  (React / Vue)             │
+│         Admin │ Staff │ Owner  (React / Vite)            │
 └────────────────────────┬────────────────────────────────┘
                          │  JWT Bearer Token
                          ▼
@@ -163,7 +167,7 @@ An **API-first, multi-tenant SaaS backend** built on Yii2. Genesis powers quotat
 | Database | MySQL / MariaDB |
 | Caching | Redis (`yiisoft/yii2-redis`) |
 | Email | Symfony Mailer / Google Mailer |
-| Frontend Target | React / Vue SPA (via CORS) |
+| Frontend Target | React/Vite SPA (via CORS) |
 
 ---
 
@@ -341,7 +345,7 @@ php yii migrate
 
 ### 4. Configure the API entry point
 
-Point your web server to serve the API from `api/v1/web/` (or `api/v1/index.php` depending on your setup). Example Nginx block:
+Point your web server to `api/v1/web/`. Example Nginx block:
 
 ```nginx
 server {
@@ -380,7 +384,7 @@ In `api/config/params-local.php`:
 
 ### CORS
 
-In `api/config/params.php`, set your allowed frontend origins:
+In `api/config/params.php`:
 
 ```php
 'allowedOrigins' => [
@@ -471,3 +475,20 @@ In `common/config/main-local.php`:
 ## License
 
 Licensed under the **BSD-3-Clause License**. See [LICENSE.md](LICENSE.md) for details.
+
+---
+
+## Contact & Demos
+
+This repository is intentionally published as a README-only showcase — the full source code is proprietary and actively running in production.
+
+If you're interested in any of the following, feel free to reach out:
+
+- **Live demo or walkthrough** — a full presentation of the platform's features and workflows
+- **Code review** — a private demo of the codebase for vetting or evaluation purposes
+- **Similar build** — commissioning a comparable system for your business
+
+📧 **[andrew@genesisdigital.co.za](mailto:andrew@genesisdigital.co.za)**
+🌐 **[genesisdigital.co.za](https://genesisdigital.co.za)**
+
+> Built by [Genesis Digital Solutions](https://genesisdigital.co.za)
