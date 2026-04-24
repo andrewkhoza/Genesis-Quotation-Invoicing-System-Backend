@@ -11,7 +11,7 @@
 
 An **API-first, multi-tenant SaaS backend** built on Yii2. Genesis powers quotation, invoicing, and credit note management for businesses — with JWT authentication, role-based access control, tenant isolation, and secure public document sharing.
 
-> **This repository contains the README only.** The source code is proprietary and actively running in production. Interested parties are welcome to [get in touch](#contact--demos) for a live walkthrough or code demo.
+> **This repository contains the README only.** The source code is proprietary. Interested parties are welcome to [get in touch](#contact--demos) for a live walkthrough or code demo.
 
 > **Frontend:** This is the backend API only. A React/Vite SPA consumes these endpoints. All authenticated requests require an `Authorization: Bearer <token>` header. Public document routes use cryptographically secure UUIDs.
 
